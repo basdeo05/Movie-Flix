@@ -74,5 +74,27 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
         
     }
+    
+    
+    
+    
+    //prepare for segue function
+    //Need to know which movie was tapped on
+    // When know which movie pass that movie to the DetailsViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //get the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    
 }
 

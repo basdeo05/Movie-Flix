@@ -75,9 +75,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
-    
-    
-    
     //prepare for segue function
     //Need to know which movie was tapped on
     // When know which movie pass that movie to the DetailsViewController
@@ -93,8 +90,5 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
 }
 
